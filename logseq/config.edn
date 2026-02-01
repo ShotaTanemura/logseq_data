@@ -420,4 +420,6 @@
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
  :journal/page-title-format "yyyyMMdd"
- :graph/settings {:journal? true}}
+ :graph/settings {:journal? false
+ :builtin-pages? false
+ :orphan-pages? true}}
