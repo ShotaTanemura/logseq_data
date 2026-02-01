@@ -155,3 +155,18 @@
 	- とりあえず、コメントの追加と固定長配列への変更だけ実施
 - 微修正
 	- `TAX`が`Implied`になっていなかったので修正
+- ANDの実装 -> DONE
+- ASLの実装
+	- Addressing modeにAccumulatorをどうやって組み込む？
+	- aslの関数側で分岐させて`get_operand_address`を使うか`self.register_a`を使うか選ぶ
+- BCCの実装
+	- Carryが0なら引数をプログラムカウンタに足して代入
+- BCSの実装
+	- BCCの逆でCarryが1なら引数をプログラムカウンタに足して代入
+- BEQの実装
+	- Zeroフラグが1なら引数をプログラムカウンタに足して代入
+- BITの実装
+	- 対象とするメモリ上の値のビットを確認するためのもの
+	- accumulatorとメモリ上の値を比較して0ならzeroフラグを立てる
+	- 値は保存しない
+	- 6, 7ビット目の値はそれぞれoverflow, negativeフラグにセットする
